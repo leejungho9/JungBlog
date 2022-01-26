@@ -1,4 +1,4 @@
-# blog  스터디 블로그
+# blog : 스터디 블로그
 
 * vscode
 * node.js

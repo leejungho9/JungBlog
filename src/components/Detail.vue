@@ -11,10 +11,13 @@
 </template>
 
 <script>
+
 export default {
     name : "Detail",
     data() {
-
+        return {
+            
+        }
     },
     props : {
         posts : Array

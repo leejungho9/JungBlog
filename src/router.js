@@ -4,6 +4,7 @@ import Home from './components/Home.vue';
 import Detail from './components/Detail.vue'
 import About from './components/About.vue'
 
+
 const routes = [
   { path: '/', 
     component: Home
@@ -19,6 +20,7 @@ const routes = [
   {
     path: "/detail/:id(\\d+)",
     component: Detail,
+    
   },
   {
     path : "/about",

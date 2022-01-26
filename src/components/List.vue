@@ -9,7 +9,7 @@
           </tr>
       </thead>
       <tbody> 
-          <tr v-for="(post, i ) in posts" :key="i" @click="$router.push(`/detail/`+ i); "> 
+          <tr v-for="(post, i ) in posts" :key="i" @click="$router.push(`/detail/`+ i);"> 
               <td>{{posts[i].number}}</td>
               <td>{{posts[i].title}}</td>
               <td>{{posts[i].date}}</td>
@@ -23,14 +23,30 @@
 </template>
 
 <script>
+import blogPost from '../assets/blog.js'
 export default {
   name  : 'List',
   props :{
-    posts : Array
+    posts : Array,
+
   },
-  method : {
+  data() {
+   return {
+     blogPost : blogPost,
+      id : 0
+   }
+  },
+  watch : {
+    '$route'() {
+      this.id = this.$route.params.id
+      this.blogPost[this.id].view ++;
+          
+    }
+  },
+  created() {
   
   }
+  
 
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
 <Navbar/>
-<router-view :posts="posts" :view="view" @count = "clickitem = $evnet"/>
+<router-view :posts="posts"/>
 </template>
 
 <script>
@@ -16,7 +16,8 @@ export default {
   },
   components: {
     Navbar  
-  }
+  },
+  
 }
 </script>
 

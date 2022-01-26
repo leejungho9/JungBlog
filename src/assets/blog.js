@@ -16,7 +16,8 @@ export default [
       content : '[Vue] Vue 문법 (2) 상세페이지',
       date : 'April 24, 2019',
       number : 3,
-      view : 0
+      view : 0,
+
     },{ 
       title : '[Vue] Vue-router 사용법',
       content : '[Vue] Vue-router 사용법 상세페이지',

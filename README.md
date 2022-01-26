@@ -70,9 +70,13 @@ const routes = [
 
 ### 페이지 이동
 ```
+
 <router-view></router-view> : 라우터로 구분된 페이지를 보여주는 자리 지정
+
 <router-link to="list"></router-link> : 페이지 이동 링크
+
 $rounter/push('detail/0') 
+
 ```
 
 ### Navigation guards
@@ -95,11 +99,17 @@ const routes = [
 ];
 ```
 
+### 여러개 route에 같은 navigation guard 추가
+* 라우팅 전에 실행 : brforeEach(), beforeResolve() 사용
+* 라우팅 후에 실행 : afterEach() 사용
+
 ### beforeEnter()
 beforeEnter의 파라미터는 두세개 작명이 가능, 첫번째 파라미터는 목적지 페이지, 두번째 파라미터는 출발 페이지 
+
 * to.fullPath : 전체 경로
 * to.params.id : id파라미터
 * return false : 라우팅 중단 
+
 ```
 beforeEnter(to, from) => {
   return to.fullpath

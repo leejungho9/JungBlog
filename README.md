@@ -81,9 +81,6 @@ $rounter/push('detail/0')
 
 ### Navigation guards
 특정 Url로 접속할 때 코드를 실행하고 싶은 경우에 사용 
-> Vue 컴포넌트안에서도 create(), mounted() 와 같이 사용 가능
-> beforeRouteEnter(), beforeRouteUpdate() 사용
-
 beforeEnter를 이용하여 함수 작성, checkLogin 이 false면 로그인 페이지로 이동
 ```
 const routes = [
@@ -100,6 +97,12 @@ const routes = [
 ```
 
 ### 여러개 route에 같은 navigation guard 추가
+```
+const router = createRouter({})
+router.beforeEach(to,from) => {
+  //라우팅 전에 실행할 코드
+})
+```
 * 라우팅 전에 실행 : brforeEach(), beforeResolve() 사용
 * 라우팅 후에 실행 : afterEach() 사용
 
@@ -115,4 +118,9 @@ beforeEnter(to, from) => {
   return to.fullpath
 }
 ```
+### Vue 컴포넌트안에서도 navigation guard 사용 가능
+create(), mounted() 와 비슷하게 사용 가능
+* beforeRouteEnter()
+* beforeRouteUpdate()
+
 
